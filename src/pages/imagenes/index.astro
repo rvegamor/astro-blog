@@ -4,7 +4,7 @@ import { Image } from "astro:assets"
 
 const title = "Imágenes en Astro"
 
-import visaUsaImg from './src/images/visa-usa.png';
+import visaUsaImg from 'src/images/visa-usa.png';
 import { Picture } from "astro:assets";
 
 ---
@@ -14,7 +14,7 @@ import { Picture } from "astro:assets";
     <hr>
 
     <h2 class="text-3xl">Imagen tradicional</h2>
-    <img src="/images/visa-usa.png" width="300" height="300">
+    <!-- <img src="/images/visa-usa.png" width="300" height="300"> -->
 
     <h2 class="text-3xl">Componente Image</h2>
     <Image src={visaUsaImg} alt="Visa Americana" width="300" height="300" />
