@@ -1,0 +1,46 @@
+---
+import MainLayout from "@layouts/MainLayout.astro"
+import { Image } from "astro:assets"
+
+const title = "Imágenes en Astro"
+
+import visaUsaImg from './src/images/visa-usa.png';
+import { Picture } from "astro:assets";
+
+---
+
+<MainLayout title={title}>
+    <h1 class="text-4xl">{title}</h1>
+    <hr>
+
+    <h2 class="text-3xl">Imagen tradicional</h2>
+    <img src="/images/visa-usa.png" width="300" height="300">
+
+    <h2 class="text-3xl">Componente Image</h2>
+    <Image src={visaUsaImg} alt="Visa Americana" width="300" height="300" />
+
+    <h2 class="text-3xl">Componente Image calidad con style</h2>
+    <Image src={visaUsaImg} alt="Visa Americana" 
+    style={{width: '300px', height: '150px'}} width="600" height="600" />
+
+    <h2 class="text-3xl">Componente Image calidad quality high</h2>
+    <Image src={visaUsaImg} alt="Visa Americana" 
+    quality="high" width="300" height="300" />   
+
+    <h2 class="text-3xl">Componente Image calidad quality low</h2>
+    <Image src={visaUsaImg} alt="Visa Americana" 
+    quality="low" width="300" height="300" />  
+
+    <h2 class="text-3xl">Componente Image con format</h2>
+    <Image src={visaUsaImg} alt="Visa Americana" 
+    format="jpg" width="300" height="300" />  
+
+    <h2 class="text-3xl">Componente Picture</h2>
+    <Picture src={visaUsaImg} alt="Visa Americana" width="300" height="300"
+    widths={[240, 540, 720, visaUsaImg.width]}
+    sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${visaUsaImg.width}`} />
+
+    <div style={{ height: "5000px" }}></div>
+
+    <img src="/images/pago-renta.jpg" width="300" height="300" loading="lazy">
+</MainLayout>

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    @apply text-white;
+}
+
+p{
+    @apply text-justify;
+    @apply leading-relaxed;
+}
+
+h2{
+    @apply py-5 text-2xl font-bold;
+}
